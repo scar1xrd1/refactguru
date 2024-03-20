@@ -1,0 +1,12 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Inter;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter.ttf);
+}
