@@ -8,59 +8,19 @@
     <title>Рефакторинг</title>
 </head>
 
-<!-- <body>
-    <h1>Hello World123</h1>
-    asdfsdfsadfsadaasdf
-    <script src="script.js"></script>
-</body> -->
 <body>
-    <header>
-        <h1>Website Header</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main id="main-content">
+    <div class="flex">
+        <nav class="sidebar">
+            sidebar
+        </nav>
 
-        <h2>Welcome to our website!</h2>
-        <p>This is the home page content.</p>
-    </main>
+        <div class="main">
+            <iframe class="main-frame" src="test.html" frameborder="0"></iframe>
+        </div>
+    </div>
 
-    <script>
-        // JavaScript for handling navigation
-        const mainContent = document.getElementById('main-content');
-        const navLinks = document.querySelectorAll('nav a');
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent default link behavior
-
-                // Get the target page from the href attribute
-                const targetPageId = link.getAttribute('href').substring(1); // Remove the '#'
-
-                // Fetch the content of the target page (you can use AJAX or load from another source)
-                fetchContent(targetPageId);
-            });
-        });
-
-        function fetchContent(pageId) {
-            // Simulate fetching content for demonstration
-            const contentMap = {
-                'home': '<h2>Welcome to our website!</h2><p>This is the home page content.</p>',
-                'about': '<h2>About Us</h2><p>Learn more about our company.</p>',
-                'services': '<h2>Our Services</h2><p>Explore our offered services.</p>',
-                'contact': '<h2>Contact Us</h2><p>Get in touch with us.</p>'
-            };
-
-            // Update the main content with the fetched content
-            mainContent.innerHTML = contentMap[pageId];
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
